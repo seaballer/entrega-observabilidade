@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#4edea3", "on-primary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-error-container": "#93000a", "on-tertiary-fixed": "#002113", "inverse-surface": "#213145", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#003ea8", "surface-dim": "#cbdbf5", "on-secondary": "#ffffff", "on-primary-container": "#eeefff", "outline": "#737686", "surface-container": "#e5eeff", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-bright": "#f8f9ff", "on-secondary-container": "#fffbff", "on-error": "#ffffff", "primary-fixed": "#dbe1ff", "primary-fixed-dim": "#b4c5ff", "surface": "#f8f9ff", "background": "#f8f9ff", "on-tertiary-container": "#bdffdb", "surface-container-high": "#dce9ff", "on-surface-variant": "#434655", "primary-container": "#2563eb", "surface-tint": "#0053db", "primary": "#004ac6", "on-surface": "#0b1c30", "outline-variant": "#c3c6d7", "on-tertiary": "#ffffff", "on-primary-fixed": "#00174b", "error": "#ba1a1a", "secondary-fixed-dim": "#c0c1ff", "inverse-on-surface": "#eaf1ff", "tertiary-container": "#007d55", "tertiary-fixed": "#6ffbbe", "secondary-fixed": "#e1e0ff", "secondary": "#4648d4", "surface-container-low": "#eff4ff", "inverse-primary": "#b4c5ff", "tertiary": "#006242", "on-tertiary-fixed-variant": "#005236", "on-secondary-fixed-variant": "#2f2ebe", "on-secondary-fixed": "#07006c", "secondary-container": "#6063ee" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-lg": "1rem", "space-md": "0.75rem", "space-2xl": "2rem", "margin-desktop": "2rem", "space-xl": "1.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem" }, "fontFamily": { "metric-stat": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-mobile": [ "Plus Jakarta Sans" ], "display": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "tabular-data": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "label-md": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ] }, "fontSize": { "metric-stat": [ "30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "display-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "tabular-data": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "500" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">ObservAI</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Motor de Operações</span></div></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant font-semibold">v2.4</span></div><div class="px-space-md py-space-sm"><div class="font-label-sm text-label-sm text-outline uppercase tracking-wider px-space-sm mb-space-xs font-semibold">Arquitetura Principal</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-path="overview" href="governance.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-label-md text-label-md">Visão Executiva</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group bg-primary-container text-on-primary font-medium shadow-sm" data-path="leads" href="leads.html" aria-current="page"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">filter_alt</span><span class="font-label-md text-label-md">Pipeline de Leads</span></div><span class="px-1.5 py-0.5 rounded-full bg-surface-container-high font-tabular-data text-label-sm text-on-surface font-semibold">142</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-path="tasks" href="tasks.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">checklist</span><span class="font-label-md text-label-md">Tarefas e Fluxos de Trabalho</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container font-tabular-data text-label-sm text-on-error-container font-semibold">18</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-path="ai-cost" href="telemetry.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">account_balance_wallet</span><span class="font-label-md text-label-md">Governança de IA e Custos</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-path="settings" href="#" data-demo="Configurações da Organização"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-label-md text-label-md">Configurações da Organização</span></div></a></nav></div></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-low"><div class="flex items-center justify-between mb-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">bolt</span><span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface">Orçamento de Tokens</span></div><span class="material-symbols-outlined text-[16px] text-tertiary-container cursor-pointer">tune</span></div><div class="flex items-baseline justify-between mb-1.5"><span class="font-tabular-data text-body-sm font-semibold text-on-surface">68% Consumido</span><span class="font-tabular-data text-body-sm text-outline">$17k / $25k</span></div><div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 68%"></div></div><div class="mt-space-xs flex items-center justify-between"><span class="font-body-sm text-[10px] text-outline leading-tight">Ciclo reinicia em 9d</span><span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container inline-block"></span>Nominal</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-margin-desktop shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs font-label-md text-label-md"><a class="text-outline hover:text-on-surface transition-colors cursor-pointer" href="governance.html">ObservAI Ops</a><span class="text-outline">/</span><span class="text-on-surface font-semibold">Pipeline de Leads</span></div><div class="relative w-96"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input id="global-search" class="w-full h-9 pl-9 pr-12 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Buscar leads, tarefas, equipe ou logs de prompt... [Cmd+K]" type="text"/><div class="absolute right-2 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-outline font-label-sm text-[10px]">⌘K</div></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-lowest shadow-sm"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Todos os Modelos Operacionais</span><span class="text-outline text-label-sm">•</span><span class="font-tabular-data text-label-sm text-tertiary font-semibold">99.98%</span></div><div class="flex items-center gap-space-xs"><button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm relative transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button class="h-9 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nova Ação</span><span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span></button></div><div class="flex items-center gap-space-md pl-space-sm"><img alt="Perfil" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDceRlZR5enarO2m1vghYd5juCEy-Jh79RKyuZbTvBss94kiatAXbWVXkF1ShE-nquOmXDpsUa3kWSjVNBqKwxPNion0O8MBZokaR-yzpJf0ncSvsmifQLRdIyhmitylwnD1_EbAL0klOFV8LbYlqktOgr6PogyutcN9nIqT_BClvXArkFHsfYKFF5fCMl-GtX-FDx6uyY2xTljvGcD7Sma7bY8Vr5VKSt2yuA0L4EDiA"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-label-sm text-outline leading-tight">Líder de Operações</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-margin-desktop py-space-xl"><div class="flex flex-col w-full">
+<!-- Faixa Dinâmica de Controle e Filtros -->
+<div class="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Campo de Busca -->
+<div class="relative w-64 md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Filtrar pipeline por conta, ICP ou tecnologia..." type="text"/>
+</div>
+<!-- Seletor de Etapa -->
+<div class="relative">
+<select class="h-9 pl-3 pr-8 rounded-lg bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm appearance-none cursor-pointer focus:outline-none">
+<option>Etapa: Todos Ativos (142)</option>
+<option>Novo / Não Atribuído</option>
+<option>Enriquecido com IA</option>
+<option>Descoberta e Triagem Técnica</option>
+<option>Geração de Proposta</option>
+<option>Fechado - Ganho (Enterprise)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Seletor de Vertical -->
+<div class="relative">
+<select class="h-9 pl-3 pr-8 rounded-lg bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm appearance-none cursor-pointer focus:outline-none">
+<option>Vertical: Todos os Setores</option>
+<option>Fintech e Bancos Algorítmicos</option>
+<option>BioTech e Genômica Clínica</option>
+<option>Infraestrutura em Nuvem e Operações de IA</option>
+<option>Logística Empresarial</option>
+<option>Sistemas Autônomos</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">tune</span>
+</div>
+<!-- Controle deslizante de Limiar de Pontuação IA -->
+<div class="hidden sm:flex items-center gap-space-sm bg-surface-container-lowest px-space-md h-9 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">psychology</span>
+<span class="font-label-sm text-label-sm text-outline font-semibold uppercase">Pontuação Mínima</span>
+<input class="w-20 accent-primary cursor-pointer h-1.5 bg-surface-container-high rounded-full" id="aiScoreSlider" max="100" min="0" type="range" value="70"/>
+<span class="font-tabular-data text-body-sm font-semibold text-primary" id="scoreVal">≥70</span>
+</div>
+<!-- Alternador de Visualização Tabela / Kanban -->
+<div class="flex items-center bg-surface-container-high p-0.5 rounded-lg shadow-sm">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1 font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">view_list</span>
+<span>Tabela</span>
+</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">view_kanban</span>
+<span>Kanban</span>
+</button>
+</div>
+</div>
+<!-- Botões de Ação -->
+<div class="flex items-center gap-space-md">
+<button class="h-9 px-space-md rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold flex items-center gap-1.5 shadow-sm hover:bg-secondary-fixed-dim transition-all" data-demo="Executar Enriquecimento com IA em Lote">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>Executar Enriquecimento com IA em Lote</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-all" data-demo="+ Importar / Ingerir Leads">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+<span>+ Importar / Ingerir Leads</span>
+</button>
+</div>
+</div>
+<!-- Faixa de Métricas de Telemetria e Pipeline -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl">
+<!-- Total Ativo -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Total no Pipeline</span>
+<span class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-metric-stat text-metric-stat text-on-surface">142</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +14.2%
+        </span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-space-xs">Em 6 regiões empresariais designadas</span>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full pointer-events-none"></div>
+</div>
+<!-- Probabilidade de Conversão IA -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Prob. Méd. de Conversão IA</span>
+<span class="w-7 h-7 rounded-lg bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[16px]">model_training</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-metric-stat text-metric-stat text-on-surface">74.2%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +3.8% MoM
+        </span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 74.2%;"></div>
+</div>
+</div>
+<!-- Valor Contratual Projetado -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Valor Projetado do Pipeline</span>
+<span class="w-7 h-7 rounded-lg bg-tertiary-fixed/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-metric-stat text-metric-stat text-on-surface">$1,840,000</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">north_east</span> +$240k
+        </span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-space-xs">Rendimento ponderado previsto de ARR</span>
+</div>
+<!-- Taxa de Enriquecimento IA -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Taxa de Enriquecimento IA</span>
+<span class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-metric-stat text-metric-stat text-on-surface">98.4%</span>
+<span class="font-label-sm text-label-sm text-tertiary-container bg-tertiary-fixed px-1.5 py-0.5 rounded text-[10px] font-bold">ÓTIMO</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-space-xs">140 / 142 dossiês sintetizados</span>
+</div>
+</div>
+<!-- Área de Trabalho Principal: Layout Dividido (Tabela Interativa e Painel de Inteligência) -->
+<div class="grid grid-cols-1 2xl:grid-cols-12 gap-space-xl items-start">
+<!-- Contêiner de tabela de pipeline de alta densidade (8 colunas em telas grandes, expande se o painel estiver recolhido) -->
+<div class="2xl:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Barra de Utilitários do Cabeçalho da Tabela -->
+<div class="px-space-xl py-space-md bg-surface-container-low flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">Fila de Leads de Alta Intenção</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-tabular-data text-label-sm font-semibold">6 Exibidos</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 rounded bg-surface-container-lowest shadow-sm" data-demo="Exportar CSV">
+<span class="material-symbols-outlined text-[16px]">download</span> Exportar CSV
+          </button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 rounded bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-[16px]">density_medium</span> Compactoo
+          </button>
+</div>
+</div>
+<!-- Estrutura da Tabela de Dados -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-md px-space-md w-10 text-center">
+<input class="w-4 h-4 rounded bg-surface text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-space-md px-space-md">Lead e Empresa</th>
+<th class="py-space-md px-space-md">Pontuação IA</th>
+<th class="py-space-md px-space-md">Etapa</th>
+<th class="py-space-md px-space-md text-right">Valor Estimado do Negócio</th>
+<th class="py-space-md px-space-md">Responsável</th>
+<th class="py-space-md px-space-md min-w-[200px]">Trecho da Síntese IA</th>
+<th class="py-space-md px-space-md">Última Atividade</th>
+<th class="py-space-md px-space-md text-center">Ações</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<!-- Linha 1: Lead selecionado / destacado (Nexus Data Systems) -->
+<tr class="bg-primary/5 hover:bg-primary/10 cursor-pointer transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary font-headline-sm flex items-center justify-center font-bold text-xs shadow-sm">
+                    ND
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-label-md text-on-surface font-semibold truncate flex items-center gap-1">
+                      Nexus Data Systems
+                      <span class="material-symbols-outlined text-[14px] text-primary" title="Selecionado Ativamente">stars</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline truncate">nexusdata.cloud</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-tabular-data">96</span> · Alta Intenção
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Descoberta</span>
+</td>
+<td class="py-space-md px-space-md text-right font-tabular-data font-semibold text-on-surface">
+                $420,000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] flex items-center justify-center font-bold">EV</span>
+<span class="font-label-md text-label-md truncate">E. Vance</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-1 text-on-surface-variant line-clamp-2 max-w-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary shrink-0 mt-0.5">auto_awesome</span>
+<span class="text-body-sm leading-tight">Série B anunciada ($34M); ampliando operações LLM em múltiplas regiões. Excelente fit Enterprise.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-outline font-tabular-data">
+                há 12m
+              </td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container-highest" title="Disparar Abordagem">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface" title="Inspecionar Inteligência">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Linha 2: Helix BioTech -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container text-on-tertiary font-headline-sm flex items-center justify-center font-bold text-xs shadow-sm">
+                    HB
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-label-md text-on-surface font-semibold truncate">Helix BioTech</span>
+<span class="font-label-sm text-label-sm text-outline truncate">helixbio.ai</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold text-label-sm">
+<span class="font-tabular-data">89</span> · Forte
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Enriquecido com IA</span>
+</td>
+<td class="py-space-md px-space-md text-right font-tabular-data font-semibold text-on-surface">
+                $310,000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] flex items-center justify-center font-bold">MK</span>
+<span class="font-label-md text-label-md truncate">M. Keller</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-1 text-on-surface-variant line-clamp-2 max-w-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary shrink-0 mt-0.5">auto_awesome</span>
+<span class="text-body-sm leading-tight">Migrando de clusters HPC legados. Principal dor: latência de inferência em GPU.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-outline font-tabular-data">
+                há 1h
+              </td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container-highest" title="Disparar Abordagem">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Linha 3: Apex Global Logistics -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface font-headline-sm flex items-center justify-center font-bold text-xs shadow-sm">
+                    AG
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-label-md text-on-surface font-semibold truncate">Apex Global Logistics</span>
+<span class="font-label-sm text-label-sm text-outline truncate">apexlogistics.com</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold text-label-sm">
+<span class="font-tabular-data">84</span> · Forte
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Proposta</span>
+</td>
+<td class="py-space-md px-space-md text-right font-tabular-data font-semibold text-on-surface">
+                $580,000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] flex items-center justify-center font-bold">DR</span>
+<span class="font-label-md text-label-md truncate">D. Rodriguez</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-1 text-on-surface-variant line-clamp-2 max-w-xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary shrink-0 mt-0.5">auto_awesome</span>
+<span class="text-body-sm leading-tight">Otimização de rotas na cadeia de suprimentos; 12k nós de despacho de contêineres prontos para integração via API.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-outline font-tabular-data">
+                há 3h
+              </td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container-highest" title="Disparar Abordagem">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Linha 4: Quantum FinTech -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-primary font-headline-sm flex items-center justify-center font-bold text-xs shadow-sm">
+                    QF
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-label-md text-on-surface font-semibold truncate">Quantum FinTech</span>
+<span class="font-label-sm text-label-sm text-outline truncate">quantumfin.io</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold text-label-sm">
+<span class="font-tabular-data">92</span> · Alta Intenção
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Fechado-Ganho</span>
+</td>
+<td class="py-space-md px-space-md text-right font-tabular-data font-semibold text-on-surface">
+                $290,000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] flex items-center justify-center font-bold">EV</span>
+<span class="font-label-md text-label-md truncate">E. Vance</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-1 text-on-surface-variant line-clamp-2 max-w-xs">
+<span class="material-symbols-outlined text-[14px] text-primary shrink-0 mt-0.5">verified</span>
+<span class="text-body-sm leading-tight">SOC2 Type II verificado, credenciais de API de produção provisionadas para liquidação automatizada.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-outline font-tabular-data">
+                há 5h
+              </td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container-highest" title="Disparar Abordagem">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Linha 5: Orbit AI Lab -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-secondary font-headline-sm flex items-center justify-center font-bold text-xs shadow-sm">
+                    OA
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-label-md text-on-surface font-semibold truncate">Orbit AI Lab</span>
+<span class="font-label-sm text-label-sm text-outline truncate">orbitresearch.ai</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold text-label-sm">
+<span class="font-tabular-data">78</span> · Moderado
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-outline font-label-sm text-label-sm font-semibold">Novo</span>
+</td>
+<td class="py-space-md px-space-md text-right font-tabular-data font-semibold text-on-surface">
+                $115,000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] flex items-center justify-center font-bold">AL</span>
+<span class="font-label-md text-label-md truncate">A. Liu</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-1 text-on-surface-variant line-clamp-2 max-w-xs">
+<span class="material-symbols-outlined text-[14px] text-outline shrink-0 mt-0.5">auto_awesome</span>
+<span class="text-body-sm leading-tight">Spin-off acadêmica em busca de hospedagem sandbox multi-tenant e governança de fine-tuning.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-outline font-tabular-data">
+                Ontem
+              </td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container-highest" title="Disparar Abordagem">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Linha 6: Solstice Media -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface font-headline-sm flex items-center justify-center font-bold text-xs shadow-sm">
+                    SM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-label-md text-on-surface font-semibold truncate">Solstice Media</span>
+<span class="font-label-sm text-label-sm text-outline truncate">solsticemedia.net</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold text-label-sm">
+<span class="font-tabular-data">71</span> · Moderado
+                </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Descoberta</span>
+</td>
+<td class="py-space-md px-space-md text-right font-tabular-data font-semibold text-on-surface">
+                $125,000
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] flex items-center justify-center font-bold">MK</span>
+<span class="font-label-md text-label-md truncate">M. Keller</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-start gap-1 text-on-surface-variant line-clamp-2 max-w-xs">
+<span class="material-symbols-outlined text-[14px] text-outline shrink-0 mt-0.5">auto_awesome</span>
+<span class="text-body-sm leading-tight">Necessidade de geração de alto volume de conteúdo com guardrails dinâmicos de conformidade de marca.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-outline font-tabular-data">
+                há 2d
+              </td>
+<td class="py-space-md px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container-highest" title="Disparar Abordagem">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Rodapé da Tabela / Paginação -->
+<div class="px-space-xl py-space-md bg-surface-container-low flex items-center justify-between font-label-md text-label-md">
+<span class="text-outline">Exibindo <span class="font-semibold text-on-surface">1 - 6</span> de 142 leads</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 rounded bg-surface-container-lowest shadow-sm text-outline hover:text-on-surface">Anterior</button>
+<button class="px-3 py-1 rounded bg-primary text-on-primary font-semibold shadow-sm">1</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest shadow-sm text-outline hover:text-on-surface">2</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest shadow-sm text-outline hover:text-on-surface">3</button>
+<span class="px-2 text-outline">...</span>
+<button class="px-3 py-1 rounded bg-surface-container-lowest shadow-sm text-outline hover:text-on-surface">Próximo</button>
+</div>
+</div>
+</div>
+<!-- Dossiê de Inteligência IA lateral direito (Lead selecionado: Nexus Data Systems) -->
+<div class="2xl:col-span-4 w-full bg-surface-container-lowest rounded-xl shadow-md p-space-xl flex flex-col gap-space-xl relative overflow-hidden">
+<!-- Cabeçalho Superior do Dossiê -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary font-display flex items-center justify-center font-bold text-lg shadow-sm">
+            ND
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Nexus Data Systems</h2>
+<span class="material-symbols-outlined text-[18px] text-tertiary" title="Domínio Verificado">verified</span>
+</div>
+<a class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-0.5" href="https://nexusdata.cloud" target="_blank">
+              nexusdata.cloud
+              <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface" title="Fixar Dossiê">
+<span class="material-symbols-outlined text-[18px]">push_pin</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface" title="Fechar Painel">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Distintivos de Telemetria Rápida -->
+<div class="grid grid-cols-2 gap-space-md bg-surface-container-low p-space-md rounded-lg">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block font-semibold">Match de ICP</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">98.2%</span>
+<span class="text-label-sm px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed rounded font-semibold">Tier 1</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block font-semibold">ARR Estimado</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5 block font-tabular-data">$420,000</span>
+</div>
+</div>
+<!-- Cartão de Contato Principal com Avatar -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Campeão Principal</span>
+<span class="font-label-sm text-[10px] text-tertiary-container bg-tertiary-fixed px-1.5 py-0.5 rounded font-bold">ONLINE</span>
+</div>
+<div class="flex items-center gap-space-md">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Retrato corporativo profissional de Sarah Lin, VP de Engenharia, em escritório de tecnologia moderno com iluminação suave, traje profissional impecável e tons neutros de azul" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhGArno3SJV1XJCGEz-h2w17ZBruFTzbNPQuF-KIqlrzVIMPd7DEbCHrXLErwB18-5j9BNvfozthLhoLnTGqZIKH93LphbAHaKYDKoIF1Cmf6ukd3zmmNa2Cv70fdpzf2pwnyco2Phf4r1Aa4M7_t92SVx-Ju7LDaOgHShbBL4UMO1P3_q3QEbXpD-ol9YZygQjJbRzTWCpQ-XrJCmmWE75YiyWOjKLSr7FaRIzJee"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-label-md text-on-surface font-semibold">Sarah Lin</span>
+<span class="font-body-sm text-body-sm text-outline">VP de Engenharia e Arquitetura de Plataforma</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="flex items-center gap-1 hover:text-primary" href="mailto:s.lin@nexusdata.cloud">
+<span class="material-symbols-outlined text-[16px] text-outline">mail</span>
+<span>s.lin@nexusdata.cloud</span>
+</a>
+<span class="text-outline">•</span>
+<a class="flex items-center gap-1 hover:text-primary" href="#" data-demo="Perfil no LinkedIn">
+<span class="material-symbols-outlined text-[16px] text-outline">link</span>
+<span>LinkedIn</span>
+</a>
+</div>
+</div>
+<!-- Dados da Empresa e Stack Detectada -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Stack Tecnológica e Infraestrutura Detectadas</span>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Kubernetes (EKS)</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Snowflake</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">vLLM Inference</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">LangChain</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">dbt Labs</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">PostgreSQL 16</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-outline pt-space-xs">
+<span>Quadros: ~240 (58 Eng)</span>
+<span>Sede: San Francisco, CA</span>
+</div>
+</div>
+<!-- Aberturas de Conversa Geradas por IA -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center gap-1 text-secondary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">psychology_alt</span>
+<span>Ângulos de Abordagem Sintetizados por IA</span>
+</div>
+<ul class="flex flex-col gap-space-sm text-body-sm text-on-surface-variant list-disc pl-4">
+<li class="leading-snug">
+            Parabenize pelo recente <strong class="text-on-surface font-semibold">$34M Series B</strong> liderado pela Horizon Ventures.
+          </li>
+<li class="leading-snug">
+            Destaque nosso <strong class="text-on-surface font-semibold">protocolo automatizado de roteamento de tokens</strong>, reduzindo a conta estimada de inferência deles em 32% em modelos multi-tenant.
+          </li>
+<li class="leading-snug">
+            Sarah publicou há 4 dias perguntando sobre <strong class="text-on-surface font-semibold">guardrails LLM SOC2</strong> na AWS; mencione nosso proxy empresarial pronto para conformidade.
+          </li>
+</ul>
+</div>
+<!-- Gasto com Inferência IA desta Conta -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-highest">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">analytics</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Gasto com Pesquisa da Conta</span>
+<span class="font-body-sm text-body-sm text-on-surface">18 interações de agentes registradas</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-tabular-data font-bold">$4.12</span>
+<span class="font-label-sm text-[10px] text-outline block">Claude 3.5 Sonnet / GPT-4o</span>
+</div>
+</div>
+<!-- Ações do CTA Principal na Gaveta Inferior -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>Gerar Proposta Empresarial Personalizada</span>
+</button>
+<div class="flex gap-space-sm">
+<button class="w-1/2 h-9 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container flex items-center justify-center gap-1 transition-all">
+<span class="material-symbols-outlined text-[16px]">schedule_send</span>
+<span>Agendar Briefing</span>
+</button>
+<button class="w-1/2 h-9 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container flex items-center justify-center gap-1 transition-all">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Reavaliar Pontuação</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Hook de interação no cliente para o feedback do controle deslizante -->
+<script>
+    const slider = document.getElementById('aiScoreSlider');
+    const valDisplay = document.getElementById('scoreVal');
+    if (slider && valDisplay) {
+      slider.addEventListener('input', (e) => {
+        valDisplay.textContent = '≥' + e.target.value;
+      });
+    }
+  </script>
+</div></main></div><script src="demo.js" defer></script></body></html>

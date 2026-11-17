@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#4edea3", "on-primary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-error-container": "#93000a", "on-tertiary-fixed": "#002113", "inverse-surface": "#213145", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#003ea8", "surface-dim": "#cbdbf5", "on-secondary": "#ffffff", "on-primary-container": "#eeefff", "outline": "#737686", "surface-container": "#e5eeff", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-bright": "#f8f9ff", "on-secondary-container": "#fffbff", "on-error": "#ffffff", "primary-fixed": "#dbe1ff", "primary-fixed-dim": "#b4c5ff", "surface": "#f8f9ff", "background": "#f8f9ff", "on-tertiary-container": "#bdffdb", "surface-container-high": "#dce9ff", "on-surface-variant": "#434655", "primary-container": "#2563eb", "surface-tint": "#0053db", "primary": "#004ac6", "on-surface": "#0b1c30", "outline-variant": "#c3c6d7", "on-tertiary": "#ffffff", "on-primary-fixed": "#00174b", "error": "#ba1a1a", "secondary-fixed-dim": "#c0c1ff", "inverse-on-surface": "#eaf1ff", "tertiary-container": "#007d55", "tertiary-fixed": "#6ffbbe", "secondary-fixed": "#e1e0ff", "secondary": "#4648d4", "surface-container-low": "#eff4ff", "inverse-primary": "#b4c5ff", "tertiary": "#006242", "on-tertiary-fixed-variant": "#005236", "on-secondary-fixed-variant": "#2f2ebe", "on-secondary-fixed": "#07006c", "secondary-container": "#6063ee" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-lg": "1rem", "space-md": "0.75rem", "space-2xl": "2rem", "margin-desktop": "2rem", "space-xl": "1.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin": "1rem" }, "fontFamily": { "metric-stat": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-mobile": [ "Plus Jakarta Sans" ], "display": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "tabular-data": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "label-md": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ] }, "fontSize": { "metric-stat": [ "30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "display-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "tabular-data": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "500" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">ObservAI</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Motor de Operações</span></div></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant font-semibold">v2.4</span></div><div class="px-space-md py-space-sm"><div class="font-label-sm text-label-sm text-outline uppercase tracking-wider px-space-sm mb-space-xs font-semibold">Arquitetura Principal</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-path="overview" href="governance.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span class="font-label-md text-label-md">Visão Executiva</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-path="leads" href="leads.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">filter_alt</span><span class="font-label-md text-label-md">Pipeline de Leads</span></div><span class="px-1.5 py-0.5 rounded-full bg-surface-container-high font-tabular-data text-label-sm text-on-surface font-semibold">142</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group bg-primary-container text-on-primary font-medium shadow-sm" data-path="tasks" href="tasks.html" aria-current="page"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">checklist</span><span class="font-label-md text-label-md">Tarefas e Fluxos de Trabalho</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container font-tabular-data text-label-sm text-on-error-container font-semibold">18</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-path="ai-cost" href="telemetry.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">account_balance_wallet</span><span class="font-label-md text-label-md">Governança de IA e Custos</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-path="settings" href="#" data-demo="Configurações da Organização"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-label-md text-label-md">Configurações da Organização</span></div></a></nav></div></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-low"><div class="flex items-center justify-between mb-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">bolt</span><span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface">Orçamento de Tokens</span></div><span class="material-symbols-outlined text-[16px] text-tertiary-container cursor-pointer">tune</span></div><div class="flex items-baseline justify-between mb-1.5"><span class="font-tabular-data text-body-sm font-semibold text-on-surface">68% Consumido</span><span class="font-tabular-data text-body-sm text-outline">$17k / $25k</span></div><div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 68%"></div></div><div class="mt-space-xs flex items-center justify-between"><span class="font-body-sm text-[10px] text-outline leading-tight">Ciclo reinicia em 9d</span><span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container inline-block"></span>Nominal</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-margin-desktop shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs font-label-md text-label-md"><a class="text-outline hover:text-on-surface transition-colors cursor-pointer" href="governance.html">ObservAI Ops</a><span class="text-outline">/</span><span class="text-on-surface font-semibold">Tarefas e Fluxos de Trabalho</span></div><div class="relative w-96"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input id="global-search" class="w-full h-9 pl-9 pr-12 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Buscar leads, tarefas, equipe ou logs de prompt... [Cmd+K]" type="text"/><div class="absolute right-2 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-high text-outline font-label-sm text-[10px]">⌘K</div></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-lowest shadow-sm"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Todos os Modelos Operacionais</span><span class="text-outline text-label-sm">•</span><span class="font-tabular-data text-label-sm text-tertiary font-semibold">99.98%</span></div><div class="flex items-center gap-space-xs"><button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm relative transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button class="h-9 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nova Ação</span><span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span></button></div><div class="flex items-center gap-space-md pl-space-sm"><img alt="Perfil" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDceRlZR5enarO2m1vghYd5juCEy-Jh79RKyuZbTvBss94kiatAXbWVXkF1ShE-nquOmXDpsUa3kWSjVNBqKwxPNion0O8MBZokaR-yzpJf0ncSvsmifQLRdIyhmitylwnD1_EbAL0klOFV8LbYlqktOgr6PogyutcN9nIqT_BClvXArkFHsfYKFF5fCMl-GtX-FDx6uyY2xTljvGcD7Sma7bY8Vr5VKSt2yuA0L4EDiA"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-label-sm text-outline leading-tight">Líder de Operações</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-margin-desktop py-space-xl"><div class="flex flex-col w-full">
+<!-- Faixa Dinâmica de Telemetria Operacional -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-sm mb-space-xl flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md z-10">
+<div class="w-10 h-10 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary relative">
+<span class="material-symbols-outlined text-[24px]">smart_toy</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs font-headline-sm text-headline-sm text-on-surface">
+<span>Orquestração Ativa de Agentes</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Autonomous Cluster v4</span>
+</div>
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1 font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+            5 agentes autônomos ativos
+          </span>
+<span>•</span>
+<span>98.4% de aderência ao SLA em 84 execuções concluídas neste ciclo</span>
+<span>•</span>
+<span class="font-tabular-data text-tertiary font-medium">TTR Médio: 3.8m</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md z-10">
+<div class="hidden lg:flex items-center gap-space-xs font-tabular-data text-label-sm text-outline px-space-md py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span>Latência:</span>
+<span class="text-on-surface font-semibold">142ms</span>
+<span class="mx-1 text-outline/40">|</span>
+<span>Vazão:</span>
+<span class="text-tertiary font-semibold">48.2 ops/s</span>
+</div>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-all shadow-sm" type="button" onclick="location.href='telemetry.html'">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Regras do Motor</span>
+</button>
+</div>
+<!-- Vetor ambiente de fundo sutil -->
+<svg class="absolute -right-8 -bottom-10 w-64 h-32 opacity-10 pointer-events-none text-primary" fill="none" viewbox="0 0 200 100">
+<path d="M0 80 Q 50 10, 100 50 T 200 20" fill="none" stroke="currentColor" stroke-width="4"></path>
+<circle cx="100" cy="50" fill="currentColor" r="6"></circle>
+<circle cx="150" cy="35" fill="currentColor" r="4"></circle>
+</svg>
+</div>
+<!-- Controles e Filtros do Cabeçalho Operacional -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Seletor de Departamento -->
+<div class="relative">
+<select class="appearance-none h-9 pl-space-md pr-8 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer hover:bg-surface-container-low transition-colors">
+<option selected="">Todos os Departamentos</option>
+<option>Sales Ops</option>
+<option>Engenharia</option>
+<option>Pesquisa em IA</option>
+<option>Finanças e Controladoria</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Filtro de Status -->
+<div class="relative">
+<select class="appearance-none h-9 pl-space-md pr-8 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer hover:bg-surface-container-low transition-colors">
+<option selected="">Todas as Fases</option>
+<option>Backlog / Etapa Inicial</option>
+<option>Processamento LLM Ativo</option>
+<option>Requer Revisão do Administrador</option>
+<option>Concluído</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Filtro de Status de SLA -->
+<div class="relative">
+<select class="appearance-none h-9 pl-space-md pr-8 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer hover:bg-surface-container-low transition-colors">
+<option selected="">Status de SLA: Todos</option>
+<option>Seguro (>4h restantes)</option>
+<option>Em Risco (<1h restante)</option>
+<option>Violado</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+<div class="h-6 w-px bg-surface-container-high hidden md:block mx-1"></div>
+<!-- Botões de Alternância de Visualização -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<button class="h-8 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">view_kanban</span>
+<span>Visualização em Quadro</span>
+</button>
+<button class="h-8 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">format_list_bulleted</span>
+<span>Visualização em Lista</span>
+</button>
+</div>
+</div>
+<!-- Ações -->
+<div class="flex items-center gap-space-sm self-end lg:self-auto">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-xs shadow-sm transition-all" type="button" data-demo="Reavaliar Fila">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Reavaliar Fila</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-space-xs shadow-sm transition-all" type="button" data-demo="Criar Tarefa Operacional">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+<span>Criar Tarefa Operacional</span>
+</button>
+</div>
+</div>
+<!-- Tela Principal: Colunas do Quadro (9 colunas) + Subpainel de Receitas de Gatilhos Automatizados (3 colunas) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Seção com 4 Colunas Kanban (desktop 9 colunas) -->
+<div class="xl:col-span-9 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-gutter-desktop">
+<!-- ==================== COLUNA 1: A FAZER ==================== -->
+<div class="flex flex-col gap-space-md min-w-0">
+<!-- Cabeçalho da Coluna -->
+<div class="flex items-center justify-between px-space-xs pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">A Fazer</span>
+<span class="font-tabular-data text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold">8</span>
+</div>
+<button class="w-6 h-6 flex items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+<!-- Cartão de Tarefa 1: Enriquecimento Urgenteee -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative overflow-hidden">
+<div class="w-1 absolute left-0 top-0 bottom-0 bg-error"></div>
+<div class="flex items-center justify-between pl-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">priority_high</span> Urgentee
+            </span>
+<span class="font-tabular-data text-label-sm text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> SLA de 1.5h
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug pl-1">
+            Reavaliar matriz de qualificação do pipeline para Leads Tier 1 EMEA
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-1 line-clamp-2">
+            Ingerir 120 leads inbound não roteados da cúpula de Frankfurt. Aplicar pesos de qualificação ICP e atribuir representantes.
+          </p>
+<div class="flex flex-wrap gap-1 pl-1 pt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-md bg-surface-container text-on-surface-variant">#LeadEnrichment</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-md bg-surface-container text-on-surface-variant">#SalesOps</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs pl-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Retrato profissional em close de analista sênior de operações de receita com óculos, sob iluminação de escritório arquitetônico moderno" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW2gWNGdgvi53CwJfjd693roAldtdL82ge_ls5V3WkgXGLMI23GXpGQo9XMJreW9uX6QHeUhdMkFcIFlotlGS4s7OEOf4r-4zysU9NPa3jQicAcSWpV5MCCI-kSSVANA-S6JtSczFivLWVWm7MkIbXjc2qbiCRmgP5iaMkKg3suzBlTbdy55j-9-4sr55kWH4CFAEoEYr1auUNCnXWejEvExdpAmqxyLksDNalxM0T"/>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Mark R.</span>
+</div>
+<span class="font-tabular-data text-label-sm text-outline">Est: 45m</span>
+</div>
+</div>
+<!-- Cartão de Tarefa 2: Reconciliação de Custos -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative overflow-hidden">
+<div class="w-1 absolute left-0 top-0 bottom-0 bg-secondary"></div>
+<div class="flex items-center justify-between pl-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold uppercase tracking-wider">
+              Alta
+            </span>
+<span class="font-tabular-data text-label-sm text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> SLA de 6h
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug pl-1">
+            Reconciliar anomalias de faturamento de inferência GPU no Azure US-East
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-1 line-clamp-2">
+            Auditar picos de rajada de tokens entre 02:00-05:00 UTC. Verificar se a sincronização contínua de embeddings entrou em loops.
+          </p>
+<div class="flex flex-wrap gap-1 pl-1 pt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-md bg-surface-container text-on-surface-variant">#CostReconcile</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-md bg-surface-container text-on-surface-variant">#FinOps</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs pl-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Controladora financeira de nuvem confiante sorrindo, com fundo de sala de servidores de alta tecnologia e iluminação azul fria" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYhw7wjbzOGvMiawYf--xU0xsMVBOU-3yAttBcvIyui5V8lK4jY5PH_y8yuwGOKxOJ9Hm5guwEURc55QOlhLt1AIpb12hjYY0YvTGqso2r-RE5x35UAys5RaQiN9CoAxrowzXlOVeRJcKCJcD8qUwthKtzG8hY_5hdf-B41LE3ebpwrqlHODB0STu4ggZnAj4aJu5P-FaZ2peCeQpkgJ9uUtQnQypzVQd3Pn-USXMO"/>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">S. Chen</span>
+</div>
+<span class="font-tabular-data text-label-sm text-outline">Est: 2.0h</span>
+</div>
+</div>
+<!-- Cartão de Tarefa 3: Pipeline de Prioridade Normal -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative overflow-hidden">
+<div class="w-1 absolute left-0 top-0 bottom-0 bg-outline-variant"></div>
+<div class="flex items-center justify-between pl-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold uppercase tracking-wider">
+              Normal
+            </span>
+<span class="font-tabular-data text-label-sm text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> SLA de 24h
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug pl-1">
+            Atualizar parâmetros de chunking vetorial dos manuais de produto do Q3
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-1 line-clamp-2">
+            Alternar o parser de recuperação de janelas de 512 tokens para sobreposição hierárquica de 1024 tokens para reduzir perda de contexto.
+          </p>
+<div class="flex items-center justify-between pt-space-xs pl-1 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm font-semibold text-primary">
+                IA
+              </div>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Atribuindo automaticamente...</span>
+</div>
+<span class="font-tabular-data text-label-sm text-outline">Est: 15m</span>
+</div>
+</div>
+</div>
+<!-- ==================== COLUNA 2: PROCESSAMENTO IA ==================== -->
+<div class="flex flex-col gap-space-md min-w-0">
+<!-- Cabeçalho da Coluna -->
+<div class="flex items-center justify-between px-space-xs pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Processamento IA</span>
+<span class="font-tabular-data text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">5</span>
+</div>
+<button class="w-6 h-6 flex items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+<!-- Cartão IA 1: Ingestão Ativa e Avaliação -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] animate-spin">progress_activity</span>
+<span>Claude 3.5 Sonnet</span>
+</div>
+<span class="font-tabular-data text-label-sm px-1.5 py-0.5 rounded bg-surface-container-low text-primary font-semibold">
+              12.4k tokens
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            Avaliando 450 Master Service Agreements para limites de indenização
+          </h4>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-tabular-data">
+<span class="text-outline">Progresso do Lote</span>
+<span class="font-semibold text-primary">312 / 450 (69%)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 69%"></div>
+</div>
+<span class="font-body-sm text-[11px] text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">check_circle</span>
+              Extraindo cláusulas de responsabilidade sem escalonamento humano
+            </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-tabular-data text-body-sm text-outline">ETA: ~1m 40s</span>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Pausar execução">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded-lg bg-surface-container hover:bg-error-container hover:text-error text-on-surface-variant transition-colors" title="Abortar tarefa do agente">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cartão IA 2: Extração Profunda -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] animate-spin">sync</span>
+<span>GPT-4o Mini</span>
+</div>
+<span class="font-tabular-data text-label-sm px-1.5 py-0.5 rounded bg-surface-container-low text-secondary font-semibold">
+              88.2k tokens
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            Análise automatizada de transcrições de áudio sintético e pontuação de intenção do cliente
+          </h4>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-tabular-data">
+<span class="text-outline">Análise de Blocos</span>
+<span class="font-semibold text-secondary">88%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 88%"></div>
+</div>
+<span class="font-body-sm text-[11px] text-outline">
+              1,240 chamadas ingeridas; 14 sinais negativos de churn detectados
+            </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-tabular-data text-body-sm text-outline">ETA: ~45s</span>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Pausar execução">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded-lg bg-surface-container hover:bg-error-container hover:text-error text-on-surface-variant transition-colors" title="Abortar tarefa do agente">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cartão IA 3: Verificação Autônoma na Web -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">travel_explore</span>
+<span>Perplexity Pro Engine</span>
+</div>
+<span class="font-tabular-data text-label-sm px-1.5 py-0.5 rounded bg-surface-container-low text-tertiary font-semibold">
+              4.1k tokens
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            Atualização em tempo real do índice de preços concorrentes em 14 portais SaaS empresariais
+          </h4>
+<div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full animate-pulse" style="width: 45%"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-outline">Rastreando catálogos regionais...</span>
+<button class="w-7 h-7 flex items-center justify-center rounded-lg bg-surface-container hover:bg-error-container hover:text-error text-on-surface-variant transition-colors" title="Abortar tarefa do agente">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ==================== COLUNA 3: REVISÃO HUMANA ==================== -->
+<div class="flex flex-col gap-space-md min-w-0">
+<!-- Cabeçalho da Coluna -->
+<div class="flex items-center justify-between px-space-xs pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Revisão Humana</span>
+<span class="font-tabular-data text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed-variant font-semibold">6</span>
+</div>
+<button class="w-6 h-6 flex items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+<!-- Cartão de Revisão 1: Aprovação de Preço Empresarial -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold uppercase tracking-wider">
+              Requer Aprovação do Administrador
+            </span>
+<span class="font-tabular-data text-label-sm text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">timer</span> há 22m
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            Aprovar desconto de preço empresarial para a Apex Logistics
+          </h4>
+<div class="p-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex justify-between items-center text-[12px]">
+<span class="text-outline">Valor Proposto do Negócio:</span>
+<span class="font-tabular-data font-semibold text-on-surface">$184,000 / yr</span>
+</div>
+<div class="flex justify-between items-center text-[12px]">
+<span class="text-outline">Nível de Desconto:</span>
+<span class="font-tabular-data font-semibold text-error">28.5% (Limiar >20%)</span>
+</div>
+<p class="text-[11px] text-outline mt-1 border-t border-outline-variant/20 pt-1">
+              Recomendação da IA: Aprovar. Compromisso de volume garante receita recorrente de 3 anos.
+            </p>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-8 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Aprovar</span>
+</button>
+<button class="h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Revisar</span>
+</button>
+</div>
+</div>
+<!-- Cartão de Revisão 2: Auditoria de Conformidade IA -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold uppercase tracking-wider">
+              Jurídico e Compliance
+            </span>
+<span class="font-tabular-data text-label-sm text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">timer</span> há 1.2h
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            Revisar rascunho de auditoria de conformidade gerado por IA para SOC-2 Type II
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Compilador automatizado gerou 42 anexos de política com links de evidência verificados do AWS CloudTrail.
+          </p>
+<div class="flex items-center gap-2 p-space-xs rounded bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">description</span>
+<span class="font-label-sm text-label-sm font-medium truncate">SOC2_Audit_Package_v2.4.pdf</span>
+<span class="font-tabular-data text-[10px] text-outline ml-auto">4.8MB</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-8 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Aprovar</span>
+</button>
+<button class="h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Feedback</span>
+</button>
+</div>
+</div>
+<!-- Cartão de Revisão 3: Disputa de Reatribuição de Lead -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-semibold uppercase tracking-wider">
+              Conflito de Território
+            </span>
+<span class="font-tabular-data text-label-sm text-outline">há 3.1h</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            Disputa da SDR sobre o roteamento da conta Nordic Telematics
+          </h4>
+<div class="flex items-center justify-between text-body-sm text-outline pt-1">
+<span class="text-on-surface-variant">Sobrescrito pela regra #44b</span>
+<span class="text-primary font-medium hover:underline cursor-pointer">Inspecionar Fluxo</span>
+</div>
+</div>
+</div>
+<!-- ==================== COLUNA 4: CONCLUÍDO ==================== -->
+<div class="flex flex-col gap-space-md min-w-0">
+<!-- Cabeçalho da Coluna -->
+<div class="flex items-center justify-between px-space-xs pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Concluídas Hoje</span>
+<span class="font-tabular-data text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">19</span>
+</div>
+<button class="w-6 h-6 flex items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+<!-- Cartão Concluído 1 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-lowest opacity-85 hover:opacity-100 shadow-sm transition-all group">
+<div class="flex items-center justify-between">
+<span class="font-tabular-data text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Concluído às 14:28
+            </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-outline">
+              Finanças
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface line-through decoration-outline/50 font-medium">
+            Gerar detalhamento executivo do gasto com tokens no Q2
+          </h4>
+<div class="p-space-xs rounded bg-surface-container-low flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-outline">Ganho de Eficiência:</span>
+<span class="font-tabular-data font-semibold text-tertiary">4.2 min vs 2.5 h de linha de base</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline pt-1">
+<span>Agente: Anthropic Claude-3-Haiku</span>
+<span class="font-tabular-data text-on-surface-variant font-medium">Economizado: $240</span>
+</div>
+</div>
+<!-- Cartão Concluído 2 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-lowest opacity-85 hover:opacity-100 shadow-sm transition-all group">
+<div class="flex items-center justify-between">
+<span class="font-tabular-data text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Concluído às 11:05
+            </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-outline">
+              Sales Ops
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface line-through decoration-outline/50 font-medium">
+            Sincronizar 340 contas convertidas do HubSpot para o Snowflake Data Lake
+          </h4>
+<div class="p-space-xs rounded bg-surface-container-low flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-outline">Ganho de Eficiência:</span>
+<span class="font-tabular-data font-semibold text-tertiary">38s vs 45m de exportação manual</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline pt-1">
+<span>Agente: Airbyte Pipeline Orchestrator</span>
+<span class="font-tabular-data text-on-surface-variant font-medium">Nenhum erro</span>
+</div>
+</div>
+<!-- Cartão Concluído 3 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-lowest opacity-85 hover:opacity-100 shadow-sm transition-all group">
+<div class="flex items-center justify-between">
+<span class="font-tabular-data text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Concluído às 09:12
+            </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-outline">
+              Engenharia
+            </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface line-through decoration-outline/50 font-medium">
+            Rotacionar chaves de webhook comprometidas das integrações legadas do Zapier
+          </h4>
+<div class="p-space-xs rounded bg-surface-container-low flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-outline">Ganho de Eficiência:</span>
+<span class="font-tabular-data font-semibold text-tertiary">1.1 min vs 1.0 h de linha de base</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline pt-1">
+<span>Por: Elena Vance (Manual)</span>
+<span class="font-tabular-data text-on-surface-variant font-medium">Auditado</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== SUBPAINEL: GATILHOS DE FLUXO DE TRABALHO AUTOMATIZADOS ==================== -->
+<div class="xl:col-span-3 flex flex-col gap-space-lg">
+<!-- Cartão da Seção de Receitas de Automação -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Gatilhos de Fluxo de Trabalho</h3>
+<span class="font-label-sm text-label-sm text-outline">Regras de execução autônoma</span>
+</div>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</div>
+<!-- Lista de Itens de Receita -->
+<div class="flex flex-col gap-space-md">
+<!-- Receita 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-[14px] leading-snug">
+                Atribuir automaticamente leads com pontuação > 85 ao AE Sênior
+              </span>
+<!-- Interruptor estilizado -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-0.5">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Encaminha oportunidades empresariais qualificadas diretamente, sem rodada de qualificação da SDR.
+            </p>
+<div class="flex items-center justify-between pt-space-xs text-outline font-tabular-data text-label-sm">
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary inline-block"></span>
+                Disparado 28 vezes hoje
+              </span>
+<span>100% de sucesso</span>
+</div>
+</div>
+<!-- Receita 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-[14px] leading-snug">
+                Sinalizar contas com gasto > $500/dia em API
+              </span>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-0.5">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Gera alerta no Slack para #finops-alerts e cria imediatamente uma tarefa de revisão de alta prioridade.
+            </p>
+<div class="flex items-center justify-between pt-space-xs text-outline font-tabular-data text-label-sm">
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary inline-block"></span>
+                Disparado 3 vezes hoje
+              </span>
+<span>Ativo</span>
+</div>
+</div>
+<!-- Receita 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-[14px] leading-snug">
+                Passagem noturna de otimização de prompts em lote
+              </span>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-0.5">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Compila exemplos few-shot a partir de edições humanas aceitas para reduzir o overhead de tokens.
+            </p>
+<div class="flex items-center justify-between pt-space-xs text-outline font-tabular-data text-label-sm">
+<span class="text-outline font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline inline-block"></span>
+                Próxima: 02:00 UTC
+              </span>
+<span>Economia estimada: 14%</span>
+</div>
+</div>
+<!-- Receita 4 (Pausada) -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs opacity-75">
+<div class="flex items-start justify-between gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-[14px] leading-snug">
+                Gerar automaticamente contrapropostas de concorrentes
+              </span>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-0.5">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Sintetiza battle-cards em um deck de proposta personalizado quando o negócio avança de etapa.
+            </p>
+<div class="flex items-center justify-between pt-space-xs text-outline font-tabular-data text-label-sm">
+<span class="text-error font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error inline-block"></span>
+                Desativado pelo Jurídico
+              </span>
+<span>Requer Revisão</span>
+</div>
+</div>
+</div>
+<button class="w-full h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Adicionar Receita de Gatilho Personalizada</span>
+</button>
+</div>
+<!-- Widget de Métricas Rápidas e Carga de Agentes ao Vivo -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-outline">Pool de Workers de Agentes</span>
+<span class="font-tabular-data text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+            8/10 Pods Ativos
+          </span>
+</div>
+<!-- Mini sparkline SVG inline -->
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">1,842 ops</span>
+<span class="font-tabular-data text-label-sm text-tertiary font-semibold">+18.4% hoje</span>
+</div>
+<svg class="w-full h-12 text-primary" fill="none" viewbox="0 0 240 48">
+<path d="M0 40 L 25 35 L 50 38 L 75 22 L 100 28 L 125 15 L 150 18 L 175 8 L 200 14 L 225 5 L 240 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M0 40 L 25 35 L 50 38 L 75 22 L 100 28 L 125 15 L 150 18 L 175 8 L 200 14 L 225 5 L 240 8 L 240 48 L 0 48 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs border-t border-surface-container-high/60">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Tokens Hoje</span>
+<span class="font-tabular-data text-headline-sm text-headline-sm text-on-surface font-semibold">4.82M</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Custo Incorrido</span>
+<span class="font-tabular-data text-headline-sm text-headline-sm text-on-surface font-semibold">$19.40</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><script src="demo.js" defer></script></body></html>
