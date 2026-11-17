@@ -1,6 +1,6 @@
 # ObservAI · Motor de Operações — protótipo de front-end
 
-Protótipo navegável montado a partir dos 4 HTML originais, sem backend.
+Protótipo navegável de painel administrativo para observabilidade em IA dentro do setor empresarial.
 
 ## Como demonstrar
 
